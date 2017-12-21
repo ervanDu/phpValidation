@@ -45,7 +45,7 @@ function indentificationUser($id, $pwd, $list ){
     <title>connexion</title>
 </head>
 <body>
-<a href="./index.php">Retour</a>
+<a href="./index.php">Retour</a><br>
 <form method="POST">
     <input type="text" name="ID" placeholder="id">
     <input type="text" name="pwd" placeholder="pwd">

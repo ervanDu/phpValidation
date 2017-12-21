@@ -36,8 +36,8 @@ if (isset($_POST['achat'])){
     <link rel="stylesheet" href="main.css">
 </head>
 <body >
-<nav>
-    <h1>Coucou, je suis l'index</h1>
+<h1>Coucou, je suis l'index</h1>
+<nav id="menu">
     <a href="connexion.php">Connexion</a>
     <a href="inscription.php">Inscription</a>
     <?php

@@ -75,3 +75,6 @@ img {
     border-color: rgba(46, 24, 35, 0.7);
 }
 
+#menu {
+    display: inline-block;
+}

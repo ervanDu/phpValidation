@@ -30,7 +30,7 @@ if(isset($_POST['ID']) && isset($_POST['pwd'])){
     <title>inscription</title>
 </head>
 <body>
-<a href="./index.php">Retour</a>
+<a href="./index.php">Retour</a><br>
 <form method="POST">
     <input type="text" name="ID" placeholder="id">
     <input type="password" name="pwd" placeholder="pwd">
