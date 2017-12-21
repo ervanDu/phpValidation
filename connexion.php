@@ -2,23 +2,39 @@
 session_start();
 echo "<h1>Je vais me coonnecter</h1>";
 
-if(isset($_POST['ID'])){
+if(isset($_POST['ID']) && isset($_POST['pwd'])){
     $jsonAccount = file_get_contents("./account.json");
     $accountListe = json_decode($jsonAccount, TRUE);
-    var_dump($accountListe["user"]);
-    if(in_array($_POST['ID'], $accountListe["user"])){
+    if(indentificationAdmin($_POST['ID'], $_POST['pwd'], $accountListe)){
         echo "<h1>WOILA</h1>";
-        $_SESSION['connexion'] = "user";
-
-    }elseif(in_array($_POST['ID'], $accountListe["admin"])){
         $_SESSION['connexion'] = "admin";
+
+    }elseif(indentificationUser($_POST['ID'], $_POST['pwd'], $accountListe)){
+        $_SESSION['connexion'] = "user";
     }
     else{
         $_SESSION['connexion'] = "nop";
     }
-    var_dump($_SESSION['connexion']);
+
 }
 
+function indentificationAdmin($id, $pwd, $list ){
+    foreach ($list["admin"] as $tuple => $value) {
+        if($tuple == $id && $value == $pwd){
+            return true;
+        }
+    }
+    return false;
+}
+
+function indentificationUser($id, $pwd, $list ){
+    foreach ($list["user"] as $tuple => $value) {
+        if($tuple == $id && $value == $pwd){
+            return true;
+        }
+    }
+    return false;
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +48,7 @@ if(isset($_POST['ID'])){
 <a href="./index.php">Retour</a>
 <form method="POST">
     <input type="text" name="ID" placeholder="id">
-    <input type="text" name="Pwd" placeholder="pwd">
+    <input type="text" name="pwd" placeholder="pwd">
     <input type="submit">
 </form>
 </body>
