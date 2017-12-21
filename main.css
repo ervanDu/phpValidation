@@ -1,0 +1,78 @@
+
+body {
+    margin: 0;
+}
+
+
+a, h1 {
+    color: #ff4420;
+    font-size: 22px;
+    background: rgba(46, 24, 35, 0.7);
+    padding: 5px 10px;
+    margin-top: 4px;
+}
+
+a {
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+nav {
+    margin: 1px;
+    padding: 1px;
+}
+
+
+input, textarea {
+    font-size: 19px;
+}
+
+form {
+    display: inline-flex;
+    flex-direction: column;
+    margin: 30px 0 8px 0;
+}
+
+.underTheGuirlande {
+    margin-top: 30px;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+a:hover {
+    color: aliceblue;
+}
+
+.luniqueUl li {
+    margin: 15px 0;
+    padding: 4px;
+
+}
+
+.luniqueUl{
+    display: inline-flex;
+    list-style: none;
+}
+
+.lightrope-wrapper {
+    margin-bottom: 30px;
+}
+
+img {
+    width: 100%;
+}
+
+.article{
+    padding: 4px;
+    width: 350px;
+    margin: 20px;
+    border-style: solid;
+    border-color: rgba(46,24,35,0.7);
+}
+
